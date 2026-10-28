@@ -7,13 +7,14 @@ const display = document.getElementById("display");
 function updateDisplay() {
     display.textContent = displayValue;
 }
+
 function inputDigit(digit) {
     if (resetDisplay || displayValue === "0") {
         displayValue = digit;
         resetDisplay = false;
-} else {
-    displayValue += digit;
-}
+    } else {
+          displayValue += digit;
+    }
 }
 updateDisplay();
 
@@ -49,6 +50,7 @@ function clearCalculator() {
     resetDisplay = false;
     updateDisplay();
 }
+
 document.querySelectorAll(".digit").forEach(function (button) {
     button.addEventListener("click", function () {
         inputDigit(button.textContent);
