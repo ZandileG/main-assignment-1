@@ -49,12 +49,18 @@ body {
 }
 
 .keys {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.key-row {
+    display: flex;
     gap: 8px;
 }
 
 button {
+    flex: 0 0 calc(25% - 6px);
     min-width: 0;
     height: 68px;
     border: 0;
@@ -79,12 +85,16 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
-.operator,.clear {
+.operator, .clear, .backspace {
     background-color: var(--sand);
 }
 
-.operator:focus, .clear:active {
+.operator:focus, .clear:active, .backspace:active {
     background-color: var(--blush);
+}
+
+.zero {
+    flex-basis: calc(75% - 2px);
 }
 
 .equals {
@@ -93,7 +103,7 @@ button:focus-visible {
 }
 
 .equals:active {
-    background-color: var(--sand);
+    background-color: var(--gray);
     color: var(--deep-navy);
 }
 
