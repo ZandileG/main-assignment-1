@@ -9,28 +9,41 @@
     
     <body>
         <main class="calculator">
-            <div id="display">0</div>
-                <div class="keys">
-                <button class="digit zero">0</button>
-                <button id="clear" class="clear">C</button>
-                <button class="operator" data-operator="/">÷</button>
-                <button class="operator" data-operator="*">×</button>
+            <output id="display">0</output>
+            <section class="keys" aria-label="Calculator keypad">
+                <div class="key-row">
+                    <button id="backspace" class="backspace" aria-label="Backspace">⌫</button>
+                    <button id="clear" class="clear" data-key="8">C</button>
+                    <button class="operator" data-operator="/" data-key="68">÷</button>
+                    <button class="operator" data-operator="*" data-key="88">×</button>
+                </div>
 
-                <button class="digit">7</button>
-                <button class="digit">8</button>
-                <button class="digit">9</button>
-                <button class="operator" data-operator="+">+</button>
+                <div class="key-row">
+                    <button class="digit" data-key="55">7</button>
+                    <button class="digit" data-key="56">8</button>
+                    <button class="digit" data-key="57">9</button>
+                    <button class="operator" data-operator="-" data-key="173">−</button>
+                </div>
 
-                <button class="digit">4</button>
-                <button class="digit">5</button>
-                <button class="digit">6</button>
-                <button class="operator" data-operator="-">−</button>
+                <div class="key-row">
+                    <button class="digit" data-key="52">4</button>
+                    <button class="digit" data-key="53">5</button>
+                    <button class="digit" data-key="54">6</button>
+                    <button class="operator" data-operator="+" data-key="61">+</button>
+                </div>
 
-                <button class="digit">1</button>
-                <button class="digit">2</button>
-                <button class="digit">3</button>
-                <button id="equals" class="equals">=</button>
-            </div>
+                <div class="key-row">
+                    <button class="digit" data-key="49">1</button>
+                    <button class="digit" data-key="50">2</button>
+                    <button class="digit" data-key="51">3</button>
+                    <button class="operator" data-operator="." data-key="190">.</button>
+                </div>
+                
+                <div class="key-row">
+                    <button class="digit zero" data-key="48">0</button>
+                    <button id="equals" class="equals">=</button>
+                </div>
+            </section>
         </main>
         <script src="script.js"></script>
     </body>
