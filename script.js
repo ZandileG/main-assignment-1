@@ -59,6 +59,7 @@ updateDisplay();
 function chooseOperator(operator) {
     if (currentOperator !== null && !resetDisplay) {
         const result = operate(currentOperator, firstNumber, Number(displayValue));
+        console.log(result);
         displayValue = String(result);
         firstNumber = result;
         updateDisplay();
@@ -74,6 +75,7 @@ function calculate() {
         return;
     }
     const result = operate(currentOperator, firstNumber, Number(displayValue));
+    console.log(result);
     displayValue = String(result);
     firstNumber = null;
     currentOperator = null;
