@@ -1,0 +1,127 @@
+:root {
+    --deep-navy: #0d1f2d;
+    --blue-gray: #546a7b;
+    --gray: #9ea3b0;
+    --blush: #fae1df;
+    --sand: #e4c3ad;
+}
+
+html {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+    display: flex;
+    min-height: 95vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: var(--deep-navy);
+    border: 10px solid var(--deep-navy);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 400px;
+    padding: 3px;
+}
+
+#display {
+    flex: 0 0 100%;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 5.5em;
+    font-weight: initial;
+    min-height: 100px;
+    text-shadow: 1.3px 1.3px var(--blue-gray);
+    margin-bottom: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    flex: 0 0 calc(25% - 3.75px);
+    height: 80px;
+    border-radius: 5%;
+    border: none;
+    font-weight: initial;
+    font-size: 2em;
+    color: var(--deep-navy);
+    box-sizing: border-box;
+}
+
+#zero {
+    flex-basis: calc(50% - 2.5px);
+    border-radius: 4px;
+}
+
+.operator {
+    background-color: var(--sand);
+}
+
+.operator:focus {
+    background-color: var(--blush);
+}
+
+.equals {
+    background-color: var(--blue-gray);
+    color: white;
+}
+
+.equals:active {
+    background-color: var(--sand);
+    color: var(--deep-navy)
+}
+
+.operand {
+    background-color: var(--blush);
+}
+
+.operand:active {
+    background-color: var(--sand);
+}
+
+.decimal {
+    background-color: var(--blush);
+}
+
+.decimal:active {
+    background-color: var(--sand);
+}
+
+.clear {
+    background-color: var(--sand);
+    color: var(--deep-navy);
+}
+
+.clear:active {
+    background-color: var(--blush);
+}
+
+.sign {
+    background-color: var(--sand);
+    color: var(--deep-navy);
+}
+
+.sign:active {
+    background-color: var(--blush);
+}
+
+.percent {
+    background-color: var(--sand);
+    color: var(--deep-navy);
+}
+
+.percent:active {
+    background-color: var(--blush);
+}
