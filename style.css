@@ -41,11 +41,22 @@ body {
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     border-radius: 6px;
     background-color: var(--gray);
     color: var(--deep-navy);
     font-size: clamp(2.5rem, 12vw, 4rem);
     text-shadow: 1.3px 1.3px var(--blue-gray);
+}
+
+#display.error {
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    text-shadow: none;
 }
 
 .keys {
@@ -85,8 +96,15 @@ button:focus-visible {
     outline-offset: 2px;
 }
 
-.operator, .clear, .backspace {
+.operator, .clear, .backspace, .decimal {
     background-color: var(--sand);
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    filter: none;
 }
 
 .operator:focus, .clear:active, .backspace:active {
